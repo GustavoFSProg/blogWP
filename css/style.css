@@ -1,0 +1,128 @@
+/*
+ Theme Name: meu-tema
+ Theme URI:    http://127.0.0.1/blogWP/wordpress5.2/themes/meu-tema
+ Description: Gustavo Tema para BlogWP
+ Author:       Gustavo Sohne
+ Author URI:   http://example.com
+ Template:    meu-tema
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  meu-tema
+*/
+
+
+ *{
+
+
+ }
+
+
+
+  .menu{
+
+
+  	background:#9fdfbe;
+
+  }
+
+
+  .lista li a{
+
+     padding: 0px 7px;
+   
+     font-weight: bold;
+     font-size: 16px;
+  }
+
+
+  .lista li:hover{
+
+    color:#00b8e6;
+    background:#1ab2ff;
+
+
+
+
+  }
+
+  .post-1{
+
+
+    padding-top:80px;
+  }
+
+  .post-1 p{
+
+  	padding:17px;
+  	text-indent:10px;
+  	text-align:justify;
+  }
+
+   .post-1 span{
+
+  	padding:17px;
+  	font-size:20px;
+  	font-weight:bold;
+  }
+
+
+
+  div.linha{
+
+  	 
+  	 width:55%;
+  	height:2px;
+  	background:#d9d9d9;
+  }
+
+ 
+
+  .banner1{
+
+  	width:100%;
+  }
+
+
+  .sidebar{
+
+  	padding:0px 50px;
+  	
+  }
+
+  .recentes{
+
+
+
+  	 
+  }
+
+  div.footer p{
+
+  	 background: linear-gradient(30deg, #737373, #bfbfbf);
+  	 color: white;
+  	 width:100%;
+  	 height:100px;
+  	 padding:40px 70px;
+  }
+
+
+
+
+ @media screen and (max-width: 767px) {
+
+
+  	div.sidebar{
+
+  		display:none;
+  	}
+
+
+   .recentes{
+
+  	  margin-top:50px;
+  }
+
+
+  }
