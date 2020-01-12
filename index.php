@@ -19,14 +19,11 @@
 	<?php  get_header(); 
 
 
-?>
- 
-
- <?php
-
 
 
  add_image_size("img-lista", 290,180, true);
+
+ add_image_size("img-recentes", 250,140, true);
 
 add_theme_support("post-thumbnails");
  ?>
@@ -101,18 +98,50 @@ add_theme_support("post-thumbnails");
 						<p><?php  the_excerpt(); ?></p>
 </div>
 
+ 
+
 </div>
 
+		<div align="center" style="margin-left: -150px"> <a href="<?php the_permalink(); ?>"><button class="btn btn-primary" type="button">Ver Post</button></a> </div>
+ <ul  >
+ 
+				<li  style="color:white; font-size:15px; font-weight: bold;"><?php previous_posts_link("&#8592; Posts Anteriores"); ?></li>
+
+ 				<li style="color:white; font-size:15px; font-weight: bold;"><?php  next_posts_link("Proximos Posts &#8594"); ?> </li> 
+
+
+ 			</ul>
+
+ 			<div id="ver"  style=" width:45%; height:30%; color:black; border:1px solid gray">
+
+ 				<div id="categ" style="font-size: 18px; ">
+
+
+ 					 <span><?php the_category(',') ?></span>
+
+ 					 ___________
+
+ 					<a href="<?php comments_link(); ?>" style="color:black;"> <?PHP  comments_number('Sem comentários','Um commentario','% Comentarios'); ?>  </a>
+ 				</div>
+ 	 			
+
+ 	 		
+
+
+
+ 			</div>
+ 			
  				<?php endwhile ?>
 
 
- 			
+
 
 				<div class="row recentes" >
 				<div class="col-md-6" ><br><br>
 
 				<h2>POSTS RECENTES</h2>
 					<div class="linha"></div>
+
 					<br>
 
 				
@@ -120,20 +149,38 @@ add_theme_support("post-thumbnails");
 
 				<div>
 
+					<?php  $posts = new WP_Query(array(
+
+                            	
+                            	"showposts" => 4
+
+                            ));
+
+				while($posts->have_posts()) : $posts->the_post()  
+
+					
+				?>
+
+
 					<div class="row">
 
 					<div class="col-md-6 post-1" >
 
-						<img src="<?php echo  get_bloginfo("template_url") ?>/img/bateria3.jpg" width="150" height="120">
+						<a href="<?php  the_permalink(); ?>"   class="thumb" ><?php  the_post_thumbnail("img-recentes"); ?> </a>
 
-						<span style="font-size: 15px; ">O que é Lorem Ipsum?</span>
+						<span style="font-size: 15px; "><?php the_title(); ?></span>
 
-						<p> Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser</p>
+						<p><?php  the_excerpt(); ?></p>
+
+
  					</div>
+
+
+ 				<?php  endwhile ?>
 
  					<div class="col-md-1"></div>
 
-		<div class="col-md-5 " >
+		<div class="col-md-5" style="margin-top: -1500px;>
 
 
 	<?php include "sidebar.php"; ?>
@@ -148,35 +195,6 @@ add_theme_support("post-thumbnails");
  					
 		</div>
 </div>
- 				
-
- 					<div class="row">
-
- 					<div class="col-md-6 post-1">
-
-						<img src="<?php  echo get_bloginfo("template_url") ?>/img/bateria2.jpg" width="150" height="120">
-
-						<span style="font-size: 15px; ">O que é Lorem Ipsum?</span>
-
-						<p>  simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser</p>
- 					</div>
-				</div>	
-
-				  <div class="row">
-
- 						<div class="col-md-6 post-1">
-
-						<img src="<?php echo  get_bloginfo("template_url") ?>/img/bateria3.jpg" width="150" height="120">
-
-						<span style="font-size: 15px; ">O que é Lorem Ipsum?</span>
-
-						<p> Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser</p>
- 					</div>
-
- 						
-	
-
- 					<div class="col-md-1"></div>
 				
  						
 
