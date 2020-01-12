@@ -30,6 +30,7 @@
 
       add_image_size("img-1", 300, 400, true);
 
+      add_image_size("img-search", 100, 200, true);
 
 
  	add_theme_support("post-thumbnails");
