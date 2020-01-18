@@ -112,16 +112,16 @@ add_theme_support("post-thumbnails");
 
  			</ul>
 
- 			<div id="ver"  style=" width:45%; height:30%; color:black; border:1px solid gray">
+ 			<div id="ver"  style=" width:45%; height:50px;  border:1px solid #d9d9d9; border-radius: 10px;">
 
- 				<div id="categ" style="font-size: 18px; ">
+ 				<div id="categ" style="font-size: 18px; padding:10px;">
 
 
- 					 <span><?php the_category(',') ?></span>
+ 					 <span style="padding:50px 30px;"><?php the_category(',') ?></span>
 
- 					 ___________
+ 					
 
- 					<a href="<?php comments_link(); ?>" style="color:black;"> <?PHP  comments_number('Sem comentários','Um commentario','% Comentarios'); ?>  </a>
+ 					<a href="<?php comments_link(); ?>" style="color:black;padding:0px 30px;"> <?PHP  comments_number('Sem comentários','Um commentario','% Comentarios'); ?>  </a>
  				</div>
  	 			
 
@@ -180,7 +180,7 @@ add_theme_support("post-thumbnails");
 
  					<div class="col-md-1"></div>
 
-		<div class="col-md-5" style="margin-top: -1500px;>
+		<div class="col-md-5" style="margin-top: -1630px;"">
 
 
 	<?php include "sidebar.php"; ?>

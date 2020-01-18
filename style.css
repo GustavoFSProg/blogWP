@@ -19,22 +19,47 @@
  }
 
 
+#categ span{
+
+  color:black;
+
+}
+
 
   .menu{
 
 
   	background:#9fdfbe;
+    margin-left:-50px;
 
   }
 
 
-  .lista li{
+  .lista li a{
 
-     padding: 0px 0px;
-     color:#003399;
+     padding: 0px 7px;
+   
      font-weight: bold;
+     font-size: 16px;
+  }
+
+
+  .lista li:hover{
+
+    color:#00b8e6;
+    background:#1ab2ff;
+
+
+
 
   }
+
+  .sider{
+
+
+
+  }
+
   .post-1{
 
 
@@ -75,7 +100,7 @@
 
   .sidebar{
 
-  	padding:0px 50px;
+  	//padding:0px 50px;
   	
   }
 

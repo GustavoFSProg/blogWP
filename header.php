@@ -49,7 +49,7 @@ wp_head();
 
 				<ul class="nav navbar-nav navbar-right lista" style="display:inline; margin-top: -25px;  margin-right: 70px;">
 
-					<li><a href="index.php" style="color:#006680; padding-right: 17px;">HOME</a></li> 
+					<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>" style="color:#006680; padding-right: 17px;">HOME</a></li> 
 					<li><a href="#" style="color:#006680; padding-right: 17px;">POSTS</a></li> 
 					<li><a href="#" style="color:#006680; padding-right: 17px;">CURSOS</a></li> 
 		
